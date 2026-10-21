@@ -32,17 +32,17 @@ export default function Skills() {
   return (
     <section
       id="competences"
-      className="relative overflow-hidden px-6 py-24 md:px-10"
+      className="relative overflow-hidden px-4 py-16 sm:px-6 md:px-10 md:py-24"
     >
       {/* Glow de fond */}
-      <div className="pointer-events-none absolute left-1/2 top-1/2 h-[500px] w-[500px] -translate-x-1/2 -translate-y-1/2 bg-[radial-gradient(closest-side,rgba(188,42,240,0.25),transparent)]" />
+      <div className="pointer-events-none absolute left-1/2 top-1/2 h-[280px] w-[280px] -translate-x-1/2 -translate-y-1/2 bg-[radial-gradient(closest-side,rgba(188,42,240,0.25),transparent)] sm:h-[400px] sm:w-[400px] md:h-[500px] md:w-[500px]" />
 
       <div className="relative mx-auto max-w-7xl text-center">
         <Reveal>
-          <p className="text-sm uppercase tracking-widest text-[#BC2AF0]">
+          <p className="text-xs uppercase tracking-widest text-[#BC2AF0] sm:text-sm">
             Mon expertise
           </p>
-          <h2 className="mt-4 text-4xl font-bold">
+          <h2 className="mt-3 text-3xl font-bold sm:mt-4 sm:text-4xl md:text-5xl">
             Compétences & <span className="text-[#BC2AF0]">Technologies</span>
           </h2>
           <div className="mx-auto mt-3 h-[3px] w-16 bg-[#BC2AF0]" />
@@ -50,12 +50,12 @@ export default function Skills() {
 
         {/* Boutons catégories */}
         <Reveal delay={100}>
-          <div className="mt-10 flex flex-wrap justify-center gap-4">
+          <div className="mt-8 flex flex-wrap justify-center gap-2 sm:mt-10 sm:gap-4">
             {categories.map((category) => (
               <button
                 key={category}
                 onClick={() => setActive(category)}
-                className={`rounded-full px-6 py-2 text-sm font-semibold transition-colors ${
+                className={`rounded-full px-4 py-2 text-xs font-semibold transition-colors sm:px-6 sm:text-sm ${
                   active === category
                     ? "bg-[#BC2AF0] text-white"
                     : "bg-white/10 text-white/70 hover:bg-white/20"
@@ -67,20 +67,22 @@ export default function Skills() {
           </div>
         </Reveal>
 
-        {/* Liste des compétences – se réanime à chaque changement grâce à key={active} */}
+        {/* Liste des compétences */}
         <Reveal key={active} delay={150}>
-          <ul className="mt-12 flex flex-wrap justify-center gap-6">
+          <ul className="mt-10 flex flex-wrap justify-center gap-3 sm:mt-12 sm:gap-6">
             {skills[active].map((skill, index) => (
               <li
                 key={skill.name}
-                className="flex h-36 w-40 flex-col items-center justify-center gap-4 rounded-2xl border border-white/10 bg-white/5 p-4 transition-all duration-300 hover:border-white/20 hover:bg-white/10"
+                className="flex h-28 w-[calc(50%-0.375rem)] flex-col items-center justify-center gap-3 rounded-2xl border border-white/10 bg-white/5 p-3 transition-all duration-300 hover:border-white/20 hover:bg-white/10 sm:h-36 sm:w-40 sm:gap-4 sm:p-4 md:w-44"
                 style={{ animationDelay: `${index * 80}ms` }}
               >
                 <i
-                  className={`${skill.icon} text-5xl`}
+                  className={`${skill.icon} text-4xl sm:text-5xl`}
                   aria-hidden="true"
                 />
-                <span className="text-sm font-semibold">{skill.name}</span>
+                <span className="text-xs font-semibold sm:text-sm">
+                  {skill.name}
+                </span>
               </li>
             ))}
           </ul>
