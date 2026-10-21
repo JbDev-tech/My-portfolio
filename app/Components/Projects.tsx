@@ -63,7 +63,7 @@ export default function Projects() {
               >
                 <div className="relative aspect-video">
                   <Image
-                    src={project.image}
+                    src="/project.png"
                     alt={`Capture d’écran de ${project.title}`}
                     fill
                     sizes="(max-width: 639px) calc(100vw - 32px), (max-width: 767px) calc(100vw - 48px), 384px"
