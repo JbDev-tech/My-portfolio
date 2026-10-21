@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Iosevka_Charon } from "next/font/google";
 import "./globals.css";
+import "devicon/devicon.min.css";
 
 const iosevka = Iosevka_Charon({
   weight: ["400", "500", "700"],
