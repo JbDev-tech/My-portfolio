@@ -1,36 +1,72 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# jbDev-Tech · Portfolio
 
-## Getting Started
+Portfolio de **Jean Baptiste**, développeur web full-stack en formation, basé à Lomé (Togo). Il présente mon parcours, mes compétences et mes projets, et regroupe mes coordonnées pour un stage.
 
-First, run the development server:
+**Démo en ligne : https://my-portfolio-seven-nu-kn04cdtdrv.vercel.app/**
+
+<img width="959" height="455" alt="image" src="https://github.com/user-attachments/assets/306349a1-9aea-4f78-b2f5-b1e358897e36" />
+
+<img width="959" height="458" alt="image" src="https://github.com/user-attachments/assets/8d49536f-21eb-4442-8050-deec90ba3d90" />
+
+
+## Fonctionnalités
+
+- Sections : accueil, à propos, compétences (avec onglets), projets, services, contact et pied de page
+- Navigation par ancres entre les sections
+- Compétences classées par catégorie (Frontend, Backend, Outils) avec les logos des technologies
+- Formulaire de contact qui ouvre la messagerie du visiteur (`mailto:`)
+- Design sombre et responsive, d'abord conçu sur Figma
+<!-- Ajoute ou retire des lignes pour que tout soit vrai : menu mobile, bouton de téléchargement du CV, etc. -->
+
+## Technologies
+
+- [Next.js](https://nextjs.org/) (App Router), React et TypeScript
+- [Tailwind CSS](https://tailwindcss.com/)
+- [lucide-react](https://lucide.dev/) et [Devicon](https://devicon.dev/) pour les icônes
+- Maquette réalisée avec Figma
+- Déploiement sur [Vercel](https://vercel.com/)
+
+## Lancer le projet en local
 
 ```bash
+git clone https://github.com/JbDev-tech/My-portfolio.git
+cd NOM-DU-DEPOT
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Ouvre ensuite [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Structure du projet
 
-## Learn More
+```text
+app/
+  layout.tsx        Police, langue et titre du site
+  page.tsx          Assemblage des sections
+  globals.css       Tailwind et couleurs de base
+  Components/       Navbar, Hero, About, Skills, Projects, Services, Contact, Footer
+public/             Images et CV
+```
 
-To learn more about Next.js, take a look at the following resources:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Ce que j'ai appris
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- Transformer une maquette Figma en composants React réutilisables
+- Mettre en page avec Tailwind CSS (flex, grid, classes responsive)
+- Gérer un état avec `useState` (les onglets des compétences) et un formulaire contrôlé
+- Optimiser les images avec `next/image` et déployer un projet sur Vercel
+- Envoie d'email (Resend) 
 
-## Deploy on Vercel
+## Pistes d'amélioration
+- Version anglaise du site
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Crédits
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Les illustrations de profil ont été générées avec un outil d'IA à partir d'une photo, puis retravaillées.
+- Les logos des technologies appartiennent à leurs propriétaires respectifs et servent uniquement à indiquer les outils utilisés.
+
+## Contact
+
+- LinkedIn : https://www.linkedin.com/in/yawo-jeanb-ahli/
+- GitHub : https://github.com/JbDev-tech
