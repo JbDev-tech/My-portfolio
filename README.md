@@ -1,36 +1,95 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# jbDev-Tech · Portfolio
 
-## Getting Started
+Portfolio de **Jean Baptiste**, développeur web full-stack en formation, basé à Lomé (Togo). Il présente mon parcours, mes compétences et mes projets, et regroupe mes coordonnées pour un stage.
 
-First, run the development server:
+**Démo en ligne : https://jbdev-tech.vercel.app**
+
+<img width="959" height="455" alt="image" src="https://github.com/user-attachments/assets/306349a1-9aea-4f78-b2f5-b1e358897e36" />
+
+<img width="959" height="458" alt="image" src="https://github.com/user-attachments/assets/8d49536f-21eb-4442-8050-deec90ba3d90" />
+
+## Fonctionnalités
+
+- Sections : accueil, à propos, compétences (avec onglets), projets, services, contact et pied de page
+- Navigation par ancres entre les sections
+- Compétences classées par catégorie (Frontend, Backend, Outils) avec les logos des technologies
+- Téléchargement de mon CV en PDF
+- Formulaire de contact fonctionnel : le message est envoyé par email grâce à une Server Action et au service Resend
+  - validation des champs côté serveur
+  - champ piège contre le spam
+  - message de confirmation ou d'erreur qui disparaît après quelques secondes
+- Design sombre et responsive, d'abord conçu sur Figma
+
+## Technologies
+
+- [Next.js](https://nextjs.org/) (App Router), React et TypeScript
+- [Tailwind CSS](https://tailwindcss.com/)
+- [Resend](https://resend.com/) pour l'envoi des emails
+- [lucide-react](https://lucide.dev/) et [Devicon](https://devicon.dev/) pour les icônes
+- Maquette réalisée avec Figma
+- Déploiement sur [Vercel](https://vercel.com/)
+
+## Lancer le projet en local
+
+```bash
+git clone https://github.com/JbDev-tech/My-portfolio.git
+cd My-portfolio
+npm install
+```
+
+Crée ensuite un fichier `.env.local` à la racine du projet :
+
+```env
+RESEND_API_KEY=ta_cle_api_resend
+CONTACT_TO_EMAIL=adresse_qui_recoit_les_messages
+```
+
+Puis lance le serveur de développement :
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Ouvre [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+> Le formulaire de contact a besoin de ces deux variables pour envoyer les messages. Le fichier `.env.local` n'est pas versionné : ne publie jamais ta clé API sur GitHub.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Structure du projet
 
-## Learn More
+```text
+app/
+  actions/
+    Contact.ts      Server Action : validation et envoi de l'email
+  layout.tsx        Police, langue et titre du site
+  page.tsx          Assemblage des sections
+  globals.css       Tailwind et couleurs de base
+  Components/       Navbar, Hero, About, Skills, Projects, Services, Contact, Footer
+public/             Images et CV
+```
 
-To learn more about Next.js, take a look at the following resources:
+## Ce que j'ai appris
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Transformer une maquette Figma en composants React réutilisables
+- Mettre en page avec Tailwind CSS (flex, grid, classes responsive)
+- Gérer un état avec `useState` (les onglets des compétences)
+- Créer un formulaire avec une Server Action Next.js et `useActionState`
+- Envoyer des emails avec Resend et valider les données côté serveur
+- Gérer les variables d'environnement en local et sur Vercel
+- Optimiser les images avec `next/image` et déployer un projet sur Vercel
+- Déboguer les différences entre Windows et Linux (par exemple la casse des noms de fichiers)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Pistes d'amélioration
 
-## Deploy on Vercel
+- Version anglaise du site
+- Nom de domaine personnalisé 
+- Ajout de nouveaux projets 
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Crédits
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Les illustrations de profil ont été générées avec un outil d'IA à partir d'une photo, puis retravaillées.
+- Les logos des technologies appartiennent à leurs propriétaires respectifs et servent uniquement à indiquer les outils utilisés.
+
+## Contact
+
+- LinkedIn : https://www.linkedin.com/in/yawo-jeanb-ahli/
+- GitHub : https://github.com/JbDev-tech
