@@ -10,7 +10,7 @@ const iosevka = Iosevka_Charon({
 
 export const metadata: Metadata = {
   title: "jbDev-Tech | Développeur Web Full-Stack",
-  description: "Portfolio de Jean Baptiste, développeur web full-stack.",
+  description: "Portfolio de Jean Baptiste, développeur web .",
 };
 
 
