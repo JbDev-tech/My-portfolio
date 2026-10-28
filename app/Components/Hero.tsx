@@ -58,7 +58,8 @@ export default function Hero() {
 
         {/* Partie portrait */}
         <Reveal delay={300} className="relative flex justify-center">
-          <div className="pointer-events-none absolute left-1/2 top-1/2 h-[150px] w-[150px] -translate-x-1/2 -translate-y-1/2 bg-[radial-gradient(closest-side,rgba(188,42,240,0.35),transparent)]" />
+          
+<div className="pointer-events-none absolute left-1/2 top-1/2 h-[400px] w-[400px] -translate-x-1/2 -translate-y-1/2 bg-[radial-gradient(closest-side,rgba(188,42,240,0.30),transparent)] blur-2xl sm:h-[550px] sm:w-[550px] md:h-[700px] md:w-[700px] lg:h-[850px] lg:w-[850px]" />
 
           <Image
             src="/avatar.png"

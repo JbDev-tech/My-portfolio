@@ -11,6 +11,9 @@ const iosevka = Iosevka_Charon({
 export const metadata: Metadata = {
   title: "jbDev-Tech | Développeur Web junior",
   description: "Portfolio de Jean Baptiste, développeur web .",
+   icons: {
+    icon: "/icon.png",
+  },
 };
 
 
