@@ -15,6 +15,15 @@ const projects = [
     github: "https://github.com/JbDev-tech/talk_ai",
     demo: "https://talk-ai-xi.vercel.app/",
   },
+   {
+    title: "AgriMétéo",
+    description:
+      "Application web de suivi agricole : gérez vos parcelles, vos cultures et vos relevés, consultez la météo sur 5 jours et recevez des conseils adaptés à chaque culture et à son stade de croissance.",
+    image: "/agrimeteo.png",
+    tags: ["Next.js", "TypeScript", "Prisma", "MySQL", "Tailwind CSS"],
+    github: "https://github.com/JbDev-tech/agrimeteo",
+    demo: "https://agrimeteo-tree.vercel.app/",
+  },
 ];
 
 const GithubIcon = ({
